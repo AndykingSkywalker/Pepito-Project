@@ -25,7 +25,7 @@
     <div id="events"></div>
 
     <script>
-        const eventSource = new EventSource('http://127.0.0.1:5000/proxy/sse');
+        const eventSource = new EventSource('http://localhost:5000/proxy/sse');
 
         eventSource.onmessage = function(event) {
             const rawData = event.data;
