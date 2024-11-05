@@ -29,7 +29,7 @@
 
         eventSource.onmessage = function(event) {
             const rawData = event.data;
-            const jsonData = rawData.replace(/^data: /, ''); // Remove the 'data: ' prefix
+            const jsonData = rawData.replace(/^data: /, '');
             const data = JSON.parse(jsonData);
             const eventDiv = document.createElement('div');
             eventDiv.textContent = `Event: ${data.event}, Time: ${data.time}`;
